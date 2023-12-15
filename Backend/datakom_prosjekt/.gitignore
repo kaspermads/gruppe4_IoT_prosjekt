@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL filer
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# Databaser
+*.sqlite3
+
+# Python environments
+datakom_venv/
+venv/
+ENV/
+django_env/
+
+# Zip-filer
+*.zip
+
+# Filer generert av IDE eller teksteditorer
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.log
+
+# OS genererte filer
+.DS_Store
+Thumbs.db
+
+# Django settings
+
+

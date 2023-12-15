@@ -1,0 +1,41 @@
+{% extends 'index1.html' %} <!-- You can change this to your base template -->
+
+{% block content %}
+    <h1>Patients List</h1>
+
+    {% if patients %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Birth Date</th>
+                    <th>Added By</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for patient in patients %}
+                    <tr>
+                        <td><a href="{% url 'patients-data' patient.id %}">{{ patient.id }}</a></td>
+                        <td>{{ patient.first_name }}</td>
+                        <td>{{ patient.last_name }}</td>
+                        <td>{{ patient.birthDate }}</td>
+                        <td>{{ patient.added_by.last_name }}, {{ patient.added_by.first_name }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+            <h3><a href="{% url 'register-patient' %}">Add new patient</a></h3>
+            <h3><a href ="{% url 'dashboard' %}">Back to dashboard</a></h3>
+
+        
+
+    {% else %}
+        <p>No patients available.</p>
+        <h3><a href="{% url 'register-patient' %}">Add new patient</a></h3>
+        <h3><a href ="{% url 'dashboard' %}">Back to dashboard</a></h3>
+
+    {% endif %}
+
+{% endblock %}
