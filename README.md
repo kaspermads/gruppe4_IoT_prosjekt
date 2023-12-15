@@ -5,5 +5,5 @@ Dette repositoriet inneholder all kode som inngår i gruppens prosjekt.
 Det innebærer:
 ESP32 - Blodtrykkssensor 
 ESP32 - Saturasjonsmåler
-Backend
+Backend og 
 Frontend
